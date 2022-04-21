@@ -1,18 +1,9 @@
-# Profile Store in Couchbase with Node JS and Express
+# Profile Store in CouchDB with Node JS and Express
 
-[![Try it now!](https://da-demo-images.s3.amazonaws.com/runItNow_outline.png?couchbase-example=nodejs-quickstart-repo&source=github)](https://gitpod.io/#https://github.com/couchbase-examples/nodejs-quickstart)
-
-This is a companion repository for: "[Quickstart in Couchbase with Node JS and Express](https://developer.couchbase.com/tutorial-quickstart-nodejs/)" at [developer.couchbase.com](https://developer.couchbase.com), which aims to get you up and running with Couchbase and the [NodeJS SDK](https://docs.couchbase.com/nodejs-sdk/current/hello-world/start-using-sdk.html). Connect to a Couchbase cluster, create, read, update, and delete documents, and learn how to write simple parameterized N1QL queries.
-
-We will be using the latest version of Couchbase (version 7) that enables scopes and collections. For the easiest setup experience, we recommend trying Couchbase Capella, our fully-managed DBaaS offering. [Claim your free trial!](https://cloud.couchbase.com/sign-up)
-
-Alternatively, you can [install Couchbase with docker](https://docs.couchbase.com/server/current/getting-started/do-a-quick-install.html) or [directly on your local device](https://docs.couchbase.com/server/current/install/install-intro.html). 
-
-## Prerequisites
 
 To run this prebuilt project, you will need:
 
-- A Couchbase Capella cluster or Couchbase 7 installed locally
+- CouchDB installed locally
 - NodeJS & NPM (v12+)
 - Code Editor
 
@@ -35,17 +26,6 @@ After cloning the repo, install required dependencies:
 ```sh
 npm install
 ```
-
-If you are using Capella, you'll have to manually create a bucket named `user_profile` and a collection named `profile`. See the documentation on [managing buckets](https://docs.couchbase.com/cloud/clusters/data-service/manage-buckets.html) and [creating a collection](https://docs.couchbase.com/cloud/clusters/data-service/scopes-collections.html#create-a-collection) for more information. Note that this collection should be created on the `_default` scope. 
-
-
-If you have Couchbase running locally, we can the bucket and collection by running the following command:
-
-```sh
-npm run init-db
-```
-
-This bucket and collection can also be created manually on local clusters by accessing the Couchbase dashboard at http://localhost:8091 and following [these instructions](https://docs.couchbase.com/server/current/tutorials/buckets-scopes-and-collections.html)
 
 At this point our application is ready to run:
 
