@@ -1,7 +1,7 @@
 {
-  "name": "node-quickstart",
+  "name": "couchdb-node-quickstart",
   "version": "1.0.0",
-  "description": "Profile Store in Couchbase with Node JS and Express",
+  "description": "Node JS and Express API to test couchDB",
   "main": "src/server.js",
   "scripts": {
     "init-test-db": "env-cmd -f ./config/test.env npx babel-node ./src/initializeCbServer.js",
@@ -25,10 +25,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@teammaestro/node-couchdb-client": "^0.5.4",
     "axios": "^0.26.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "couchbase": "^4.0.0",
     "express": "^4.17.3",
     "qs": "^6.10.3",
     "swagger-ui-express": "^4.3.0",
@@ -44,7 +44,7 @@
     "env-cmd": "^10.1.0",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
-    "supertest": "^6.2.2",
-    "set-value": ">=4.0.1"
+    "set-value": ">=4.0.1",
+    "supertest": "^6.2.2"
   }
 }

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Profile Store API
-  description: Simple Profile Store API built with NodeJS, Express, Babel, and Couchbase
+  title: CRUD API
+  description: Simple CRUD API built with NodeJS, Express, Babel, and CouchDB
   version: 0.1.0
 tags:
   - name: profile
@@ -21,19 +21,19 @@ paths:
           application/x-www-form-urlencoded:
             schema:
               $ref: '#/components/schemas/ProfileRequest'
-      responses:
-        '200':
-          description: Created
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProfileCreatedResponse'
-        '500':
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PutProfileBadResponse'
+      # responses:
+      #   '200':
+      #     description: Created
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/ProfileCreatedResponse'
+      #   '500':
+      #     description: Bad Request
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/PutProfileBadResponse'
   /profile/{pid}:
     get:
       tags:
@@ -47,19 +47,19 @@ paths:
           required: true
           schema:
             type:  string
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProfileBasic'
-        '500':
-          description: KV Operation Failed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetProfileDocumentNotFound'
+      # responses:
+      #   '200':
+      #     description: OK
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/ProfileBasic'
+      #   '500':
+      #     description: KV Operation Failed
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/GetProfileDocumentNotFound'
     put:
       tags:
         - profile
@@ -78,19 +78,19 @@ paths:
           application/x-www-form-urlencoded:
             schema:
               $ref: '#/components/schemas/ProfileRequest'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProfileUpdateResponse'
-        '500':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PutProfileDocumentNotFound'
+      # responses:
+      #   '200':
+      #     description: OK
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/ProfileUpdateResponse'
+      #   '500':
+      #     description: OK
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/PutProfileDocumentNotFound'
     delete:
       tags:
         - profile
@@ -103,15 +103,15 @@ paths:
           description: Profile ID
           schema:
             type : string
-      responses:
-        '200':
-          description: OK
-        '500':
-          description: Delete Failed
-          content:
-            application/json:
-              schema: 
-                $ref: '#/components/schemas/DeleteProfileDocumentNotFound'
+      # responses:
+      #   '200':
+      #     description: OK
+      #   '500':
+      #     description: Delete Failed
+      #     content:
+      #       application/json:
+      #         schema: 
+      #           $ref: '#/components/schemas/DeleteProfileDocumentNotFound'
   /profiles:
     get:
       tags:
@@ -137,19 +137,19 @@ paths:
             type: string
           description: The text to search first and last name
           example: jo
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema: 
-                $ref: '#/components/schemas/ArrayOfProfiles'
-        '500':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetProfilesDocumentNotFound'
+      # responses:
+      #   '200':
+      #     description: OK
+      #     content:
+      #       application/json:
+      #         schema: 
+      #           $ref: '#/components/schemas/ArrayOfProfiles'
+      #   '500':
+      #     description: OK
+      #     content:
+      #       application/json:
+      #         schema:
+      #           $ref: '#/components/schemas/GetProfilesDocumentNotFound'
 components:
   schemas:
     ProfileRequest:
